@@ -1,0 +1,23 @@
+﻿{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:asset.style name="jssorb07" standalone="1">
+	.jssorb07 {
+		position: absolute;
+	}
+	.jssorb07 div, .jssorb07 div:hover, .jssorb07 .av {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background: url(/typo3conf/ext/jst_content/Resources/Public/Vendor/jssor/img/b07.png) no-repeat;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.jssorb07 div { background-position: -5px -5px; }
+	.jssorb07 div:hover, .jssorb07 .av:hover { background-position: -35px -5px; }
+	.jssorb07 .av { background-position: -65px -5px; }
+	.jssorb07 .dn, .jssorb07 .dn:hover { background-position: -95px -5px; }
+</v:asset.style>
+
+<div u="navigator" class="jssorb07" style="bottom: 16px; right: 6px;">
+	<div u="prototype"></div>
+</div>

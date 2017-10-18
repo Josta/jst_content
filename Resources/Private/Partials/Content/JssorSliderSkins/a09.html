@@ -1,0 +1,26 @@
+﻿{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:asset.style name="jssora09" standalone="1">
+	.jssora09l, .jssora09r {
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		background: url(/typo3conf/ext/jst_content/Resources/Public/Vendor/jssor/img/a09.png) no-repeat;
+		overflow: hidden;
+		opacity: .4;
+		filter: alpha(opacity=40);
+	}
+	.jssora09l { background-position: -5px -35px; }
+	.jssora09r { background-position: -65px -35px; }
+	.jssora09l:hover { background-position: -5px -35px; opacity: .8; filter:alpha(opacity=80); }
+	.jssora09r:hover { background-position: -65px -35px; opacity: .8; filter:alpha(opacity=80); }
+	.jssora09l.jssora09ldn { background-position: -5px -35px; opacity: .3; filter:alpha(opacity=30); }
+	.jssora09r.jssora09rdn { background-position: -65px -35px; opacity: .3; filter:alpha(opacity=30); }
+	.jssora09l.jssora09lds { background-position: -5px -35px; opacity: .3; pointer-events: none; }
+	.jssora09r.jssora09rds { background-position: -65px -35px; opacity: .3; pointer-events: none; }
+</v:asset.style>
+
+<span u="arrowleft" class="jssora09l" style="top: 123px; left: 8px;"></span>
+<span u="arrowright" class="jssora09r" style="top: 123px; right: 8px;"></span>

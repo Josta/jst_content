@@ -1,0 +1,59 @@
+
+# Define local resource paths (for Flux)
+plugin.tx_jstcontent.view {
+	layoutRootPaths.0 = EXT:jst_content/Resources/Private/Layouts/
+	partialRootPaths.0 = EXT:jst_content/Resources/Private/Partials/
+}
+
+# Include assets
+page.includeJSFooterlibs {
+	match_height = EXT:jst_content/Resources/Public/Vendor/matchHeight/jquery.matchHeight-min.js
+	match_height.disableCompression = 1
+}	
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('jst_assets')]
+	page.includeCSS.jst_content = EXT:jst_content/Resources/Public/jst_content.scss
+	page.includeJSFooter.jst_content = EXT:jst_content/Resources/Public/jst_content.coffee
+[else]
+	page.includeCSS.icon_markup = EXT:jst_content/Resources/Public/Precompiled/icons.css
+	page.includeCSS.jst_content = EXT:jst_content/Resources/Public/Precompiled/jst_content.css
+	page.includeJSFooter.jst_content = EXT:jst_content/Resources/Public/Precompiled/jst_content.js
+[end]
+
+# Workaround for faulty rendering definitions in Flux (may become obsolete soon)
+# https://github.com/FluidTYPO3/flux/issues/1442
+lib.fluxElement =< lib.contentElement
+lib.fluxElement {
+	20 >
+	templateName = Generic
+	variables.content = USER
+	variables.content {
+		userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+		extensionName = Flux
+		vendorName = FluidTYPO3
+	}
+}
+tt_content {
+	flux_youtubevideo >
+	flux_youtubevideo < lib.fluxElement
+	flux_youtubevideo.variables.content.pluginName = YoutubeVideo
+
+	flux_googlemaps >
+	flux_googlemaps =< lib.fluxElement
+	flux_googlemaps.variables.content.pluginName = GoogleMaps
+	
+	flux_area >
+	flux_area < lib.fluxElement
+	flux_area.variables.content.pluginName = Area
+	
+	flux_jssorslider >
+	flux_jssorslider < lib.fluxElement
+	flux_jssorslider.variables.content.pluginName = JssorSlider
+	
+	flux_columns >
+	flux_columns < lib.fluxElement
+	flux_columns.variables.content.pluginName = Columns
+	
+	flux_tabs >
+	flux_tabs < lib.fluxElement
+	flux_tabs.variables.content.pluginName = Tabs
+}

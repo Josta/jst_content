@@ -1,0 +1,55 @@
+﻿{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:asset.style name="jssort04" standalone="1">
+	.jssort04 {
+		position: absolute;
+		width: 100%;
+		height: 60px;
+		right: 0;
+		bottom: 0;
+	}
+	.jssort04 .thumbs {
+		bottom: 25px;
+		right: 30px;
+	}
+	.jssort04 .p {
+		width: 62px;
+		height: 32px;
+	}
+	.jssort04 .w,
+	.jssort04 .pav:hover .w {
+		border: #09f 1px solid;
+	}
+	.jssort04 .pdn .w,
+	.jssort04 .pav .w {
+		border-style: dashed;
+	}
+	.jssort04 .c {
+		background-color: #000;
+		filter: alpha(opacity=45);
+		opacity: .45;
+		transition: opacity .6s;
+		-webkit-transition: opacity .6s;
+	}
+	.jssort04 .p:hover .c,
+	.jssort04 .pav .c {
+		filter: alpha(opacity=0);
+		opacity: 0;
+	}
+	.jssort04 .p:hover .c {
+		transition: none;
+		-webkit-transition: none;
+	}
+	
+</v:asset.style>
+
+<div class="jssort04" u="thumbnavigator">
+	<!-- Thumbnail Item Skin Begin -->
+	<div class="thumbs" u="slides">
+		<div class="p" u="prototype">
+			<div class="w"><div class="t" u="thumbnailtemplate"></div></div>
+			<div class="c"></div>
+		</div>
+	</div>
+	<!-- Thumbnail Item Skin End -->
+</div>

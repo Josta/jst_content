@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+    xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<f:layout name="Content/Default"/>
+
+<f:section name="Configuration">
+    <flux:form id="GoogleMaps">
+		<flux:form.option.icon value="EXT:jst_content/Resources/Public/Icons/Content/GoogleMaps.svg" />
+		
+		<flux:field.input name="latitude" />
+		<flux:field.input name="longitude" />
+		<flux:field.input name="zoom" />
+		
+		<flux:form.section name="markers">
+			<flux:form.object name="marker">
+				<flux:field.input name="title" />
+				<flux:field.text name="description" rows="5" cols="30" />
+				<flux:field.input name="latitude" />
+				<flux:field.input name="longitude" />
+			</flux:form.object>
+		</flux:form.section>
+		
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<v:variable.set name="marker_string"><f:for each="{markers}" as="obj">&markers=color:red|{obj.marker.latitude},{obj.marker.longitude}</f:for></v:variable.set>
+	{v:variable.extensionConfiguration(extensionKey:'jst_content',path:'google_maps_api_key') -> v:variable.set(name:'api_key')}
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center={latitude},{longitude}&zoom={zoom}&size=400x200&maptype=roadmap{marker_string}&key={api_key}" style="display: block; margin: 0 auto" />
+</f:section>
+
+<f:section name="Main">
+	{v:asset.script(name: 'googlemaps_api', external: 1, standalone: 1, rewrite: 0,
+	path: "//maps.googleapis.com/maps/api/js?key={v:variable.extensionConfiguration(extensionKey:'jst_content',path:'google_maps_api_key')}")}
+	
+	<div class="map" data-zoom="{zoom}" data-lat="{latitude}" data-lon="{longitude}" >
+		<f:for each="{markers}" as="obj">
+			<div class="map-marker" data-name="{obj.marker.title}" data-lat="{obj.marker.latitude}" data-lon="{obj.marker.longitude}">
+			  <div class="h4">{obj.marker.title}</div>
+			  <p>{obj.marker.description}</p>
+			</div>
+		</f:for>
+	</div>
+</f:section>
+
+</html>

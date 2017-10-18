@@ -1,0 +1,25 @@
+﻿{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:asset.style name="jssorb01" standalone="1">
+	.jssorb01 {
+		position: absolute;
+	}
+	.jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		filter: alpha(opacity=70);
+		opacity: .7;
+		overflow: hidden;
+		cursor: pointer;
+		border: #000 1px solid;
+	}
+	.jssorb01 div { background-color: gray; }
+	.jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+	.jssorb01 .av { background-color: #fff; }
+	.jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+</v:asset.style>
+
+<div u="navigator" class="jssorb01" style="bottom: 16px; right: 10px;">
+	<div u="prototype"></div>
+</div>

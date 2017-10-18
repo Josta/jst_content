@@ -1,0 +1,10 @@
+# Allow Fluid syntax in HTML content elements
+tt_content.html.variables {
+	body = FLUIDTEMPLATE
+	body.template = TEXT
+	body.template.data = field:bodytext
+}
+
+lib.contentElement {
+	templateRootPaths.40 = EXT:jst_content/Resources/Private/Templates/fluid_styled_content/fluid_in_html/
+}

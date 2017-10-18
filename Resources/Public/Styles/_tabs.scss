@@ -1,0 +1,112 @@
+/* NAVTABS STYLE */
+.nav-tabs-simple { 
+
+	.nav-tabs {
+		margin-bottom: 20px;
+		width: 100%;
+		border-bottom: 0;
+	}
+	.nav-tabs > li {    
+		float: none;
+		display: table-cell;
+		width: 1%;
+		position: relative;
+		z-index: 1;
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid #cecece;
+		text-align: center;
+		a {
+			line-height: 1.01;
+			margin-bottom: 0;
+			border-radius: 4px 4px 0 0;
+			text-align: center;
+			margin-right: 0;
+			font-size: 25px;
+			color: #888;
+			border: none !important;
+			outline: none !important;
+			background: none !important;
+			font-weight: 300;
+			&:hover {
+				color: #fe4918;
+			}
+		}
+	}
+	.nav-tabs > li.active {
+		a {
+			color: #fe4918 !important;
+		}
+		&:after, &:before {
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: '';
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+		&:before {
+			border-color: rgba(234, 234, 234, 0);
+			border-top-color: #cecece;
+			border-width: 12px 17px;
+			margin-left: -12px;
+		}
+		&:after {
+			border-color: rgba(250, 250, 250, 0);
+			border-top-color: #fff;
+			border-width: 10px 15px;
+			margin-left: -10px;
+		}
+	}
+}
+
+
+@media (min-width: $screen-md-min) {
+	.nav-tabs-icons-above-desktop {
+		.nav-tabs [class^="icon-"]:before {
+		  padding-top: 5px;
+		  font-size: 45px;
+		  display: block !important;
+		  width: auto !important;
+		  margin: 0 !important;
+		  text-align: center !important;
+		}
+	}
+}
+
+@media (max-width: $screen-md-min - 1) {
+
+	.nav-tabs-simple .nav-tabs > li a {
+		padding: 5px !important;
+	}
+
+	.nav-tabs-dynamic-width-small {
+		.nav-tabs {
+			display: table;
+		}
+		.nav-tabs > li {
+			display: block;
+			width: auto;
+		}		
+	}
+
+	.nav-tabs-collapse {
+		.nav-tabs > li {
+			display: block;
+			width: auto;
+		}
+	}
+	
+	.nav-tabs-icons-above-small {
+		.nav-tabs [class^="icon-"]:before {
+			padding-top: 5px;
+			font-size: 45px;
+			display: block !important;
+			width: auto !important;
+			margin: 0 !important;
+			text-align: center !important;
+		}
+	}
+
+}

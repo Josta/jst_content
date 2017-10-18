@@ -1,0 +1,37 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace jstcontent=Josta\JstContent\ViewHelpers}
+	
+<f:layout name="Content/Default"/>
+
+<f:section name="Configuration">
+    <flux:form id="YoutubeVideo">
+		<flux:form.option.icon value="EXT:jst_content/Resources/Public/Icons/Content/YoutubeVideo.svg" />
+		
+		<flux:field.input name="videokey" />
+		<flux:field.input name="maxwidth" default="600px" />
+		<flux:field.checkbox name="show_controls" default="1" />
+		<flux:field.select name="aspect_ratio" items="{0:{0:'16:9', 1:'16by9'}, 1:{0:'4:3', 1:'4by3'}, 2:{0:'2:1', 1:'2by1'}, 3:{0:'2.40:1', 1:'240by100'}}" default="16by9" />	
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<a href="https://www.youtube.com/watch?v={videokey}" target="_blank">
+		<img src="https://i.ytimg.com/vi/{videokey}/hqdefault.jpg" width="300" style="display:block; margin:0 auto; max-width:100%;" />
+	</a>
+</f:section>
+
+<f:section name="Main">
+	<div class="youtubevideo youtubevideo-{aspect_ratio}" style="max-width:{maxwidth}; background: url('https://i.ytimg.com/vi/{videokey}/hqdefault.jpg') center/cover">	
+		<div class="yt-iframewrap">
+			<div class="yt-centered">
+				<iframe id="yt-{v:content.info(field:'uid')}" allowfullscreen=""
+					data-frame-src="https://www.youtube-nocookie.com/embed/{videokey}?rel=0&autoplay=true&autohide=1&iv_load_policy=3&color=white&showinfo=0&controls={show_controls}">
+				</iframe>
+			</div>
+		</div>
+		<div class="overlay" data-target-frame="#yt-{v:content.info(field:'uid')}">	
+			<jstcontent:icon name="play-circle" classes="yt-centered" />
+		</div>
+	</div>
+</f:section>

@@ -1,0 +1,129 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+    xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<f:layout name="Content/Default"/>
+
+<f:section name="Configuration">
+    <flux:form id="Columns">
+		<flux:form.option.icon value="EXT:jst_content/Resources/Public/Icons/Content/Columns.svg" />
+		<flux:form.option.group value="Grids" />
+		
+		<flux:field.select name="columns" requestUpdate="1" items="2,3,4" default="2" />		
+
+		{v:variable.set(name: 'items2', value:{
+			   0:{0:'3-9',	1:'3-9',	2:'EXT:jst_content/Resources/Public/Icons/Columns/3-9.svg'},
+			   1:{0:'4-8',	1:'4-8',	2:'EXT:jst_content/Resources/Public/Icons/Columns/4-8.svg'},
+			   2:{0:'5-7',	1:'5-7',	2:'EXT:jst_content/Resources/Public/Icons/Columns/5-7.svg'},
+			   3:{0:'6-6',	1:'6-6',	2:'EXT:jst_content/Resources/Public/Icons/Columns/6-6.svg'},
+			   4:{0:'7-5',	1:'7-5',	2:'EXT:jst_content/Resources/Public/Icons/Columns/7-5.svg'},
+			   5:{0:'8-4',	1:'8-4',	2:'EXT:jst_content/Resources/Public/Icons/Columns/8-4.svg'},
+			   6:{0:'9-3',	1:'9-3',	2:'EXT:jst_content/Resources/Public/Icons/Columns/9-3.svg'},
+			   7:{0:'12-12',1:'12-12',	2:'EXT:jst_content/Resources/Public/Icons/Columns/12-12.svg'}
+		})}	
+		<flux:field.select name="conf2_sm" items="{items2}" default="6-6" showIconTable="1" displayCond="FIELD:columns:=:2" />
+		<flux:field.select name="conf2_md" items="{items2}" default="" showIconTable="0" emptyOption="" displayCond="FIELD:columns:=:2" />
+		<flux:field.select name="conf2_xs" items="{items2}" default="12-12" showIconTable="0" displayCond="FIELD:columns:=:2" />
+		
+		{v:variable.set(name: 'items3', value:{
+			   0:{0:'4-4-4',	1:'4-4-4',		2:'EXT:jst_content/Resources/Public/Icons/Columns/4-4-4.svg'},
+			   1:{0:'3-6-3',	1:'3-6-3',		2:'EXT:jst_content/Resources/Public/Icons/Columns/3-6-3.svg'},
+			   2:{0:'2-8-2',	1:'2-8-2',		2:'EXT:jst_content/Resources/Public/Icons/Columns/2-8-2.svg'},
+			   3:{0:'6-6-12',	1:'6-6-12',		2:'EXT:jst_content/Resources/Public/Icons/Columns/6-6-12.svg'},
+			   4:{0:'12-6-6',	1:'12-6-6',		2:'EXT:jst_content/Resources/Public/Icons/Columns/12-6-6.svg'},
+			   5:{0:'12-12-12',	1:'12-12-12',	2:'EXT:jst_content/Resources/Public/Icons/Columns/12-12-12.svg'}
+		})}	
+		<flux:field.select name="conf3_sm" items="{items3}" default="4-4-4" showIconTable="1" displayCond="FIELD:columns:=:3" />
+		<flux:field.select name="conf3_md" items="{items3}" default="" showIconTable="0" emptyOption="" displayCond="FIELD:columns:=:3" />
+		<flux:field.select name="conf3_xs" items="{items3}" default="12-12-12" showIconTable="0" displayCond="FIELD:columns:=:3" />
+
+		{v:variable.set(name: 'items4', value:{
+			   0:{0:'3-3-3-3',		1:'3-3-3-3',	2:'EXT:jst_content/Resources/Public/Icons/Columns/3-3-3-3.svg'},
+			   1:{0:'2-4-4-2',		1:'2-4-4-2',	2:'EXT:jst_content/Resources/Public/Icons/Columns/2-4-4-2.svg'},
+			   2:{0:'4-2-4-2',		1:'4-2-4-2',	2:'EXT:jst_content/Resources/Public/Icons/Columns/4-2-4-2.svg'},
+			   3:{0:'6-6-6-6',    	1:'6-6-6-6',	2:'EXT:jst_content/Resources/Public/Icons/Columns/6-6-6-6.svg'},
+			   4:{0:'12-12-12-12',	1:'12-12-12-12',2:'EXT:jst_content/Resources/Public/Icons/Columns/12-12-12-12.svg'}
+		})}	
+		<flux:field.select name="conf4_sm" items="{items4}" default="3-3-3-3" showIconTable="1" displayCond="FIELD:columns:=:4" />
+		<flux:field.select name="conf4_md" items="{items4}" default="" showIconTable="0" emptyOption="" displayCond="FIELD:columns:=:4" />
+		<flux:field.select name="conf4_xs" items="{items4}" default="12-12-12-12" showIconTable="0" displayCond="FIELD:columns:=:4" />
+		
+		<flux:field.select name="order2"   items="1-2,2-1" 	default="1-2" displayCond="FIELD:columns:=:2" />
+		<flux:field.select name="order3"   items="1-2-3,1-3-2,2-3-1,2-1-3" default="1-2-3" displayCond="FIELD:columns:=:3" />
+		<flux:field.select name="order4"   items="1-2-3-4,2-3-1-4" default="1-2-3-4" displayCond="FIELD:columns:=:4" />
+		
+		<flux:field.checkbox name="equal_height_columns" default="0" />
+		<flux:field.select name="gap" items="none,s,m,l,xl" default="m"  translateCsvItems="1" />
+		
+		<flux:field.input name="customclass1" />
+		<flux:field.input name="customclass2" />
+		<flux:field.input name="customclass3" displayCond="FIELD:columns:>=:3" />
+		<flux:field.input name="customclass4" displayCond="FIELD:columns:>=:4" />
+		
+    </flux:form>
+	<flux:grid>
+		<flux:grid.row>
+			<f:if condition="{columns} > 0">
+				<v:iterator.for from="1" to="{columns}" iteration="i">
+					<flux:grid.column name="column{i.index}" />
+				</v:iterator.for>
+			</f:if>
+		</flux:grid.row>
+	</flux:grid>
+</f:section>
+
+<f:section name="Main">
+	<div class="row gap-{gap}">
+		<f:if condition="{v:variable.get(name:'conf{columns}_md')}!=''">
+			{v:variable.set(name:'size_md_defined', value:1)}
+		</f:if>
+		{v:variable.get(name:'order{columns}') -> v:iterator.explode(glue: '-') -> v:variable.set(name:'order')}
+		{v:variable.get(name:'conf{columns}_xs') -> v:iterator.explode(glue: '-') -> v:variable.set(name:'sizes_xs')}
+		{v:variable.get(name:'conf{columns}_sm') -> v:iterator.explode(glue: '-') -> v:variable.set(name:'sizes_sm')}
+		{v:variable.get(name:'conf{columns}_md') -> v:iterator.explode(glue: '-') -> v:variable.set(name:'sizes_md')}
+		<f:for each="{order}" as="vpos" iteration="lpos">
+			
+			<f:comment>calculate position shift between logical order and viewing order</f:comment>
+			{v:math.subtract(a: vpos, b: lpos.cycle) -> v:variable.set(name:'shift')}
+			<f:if condition="{shift}>0">
+				{lpos.index -> v:variable.set(name:'start')}	
+				{shift -> v:variable.set(name:'len')}			
+			</f:if>
+			<f:if condition="{shift}<0">	
+				{vpos -> v:variable.set(name:'start')}	
+				{v:math.subtract(a:0, b:shift) -> v:variable.set(name:'len')}
+			</f:if>
+			<f:if condition="{shift}!=0">
+				{sizes_xs -> v:iterator.slice(start: start, length: len) -> v:math.sum() -> v:variable.set(name:'acc_xs')}
+				{sizes_sm -> v:iterator.slice(start: start, length: len) -> v:math.sum() -> v:variable.set(name:'acc_sm')}
+				<f:if condition="{size_md_defined}">
+					{sizes_md -> v:iterator.slice(start: start, length: len) -> v:math.sum() -> v:variable.set(name:'acc_md')}
+				</f:if>
+			</f:if>
+		
+			<f:comment>get size classes</f:comment>
+			{v:math.subtract(a: vpos, b: 1) -> v:variable.set(name:'idx')}
+			{v:variable.get(name:'sizes_xs.{idx}') -> v:variable.set(name:'xs_size')}
+			{v:variable.get(name:'sizes_sm.{idx}') -> v:variable.set(name:'sm_size')}
+			{f:if(condition:'{shift}>0', then:'push', else:'pull') -> v:variable.set(name:'verb')}
+			
+			<v:variable.set name="classes">
+				col-sm-{sm_size}
+				{f:if(condition:'{xs_size}<12', then:'col-xs-{xs_size}')}
+				{f:if(condition:'{size_md_defined}', then:'col-md-{v:variable.get(name:"sizes_md.{idx}")}')}
+				<f:if condition="{shift}!=0">
+					col-sm-{verb}-{acc_sm}	
+					{f:if(condition:'{acc_xs}<12', then:'col-xs-{verb}-{acc_xs}')}	
+					{f:if(condition:'{size_md_defined}', then:'col-md-{verb}-{acc_md}')}	
+				</f:if>
+				{f:if(condition:'{equal_height_columns}', then:'equal-height')}
+				{v:variable.get(name:"customclass{vpos}")}
+			</v:variable.set>
+			
+			<div class="{classes -> f:spaceless()}">
+				<flux:content.render area="column{vpos}" />
+			</div>
+		</f:for>
+	</div>
+</f:section>
+
+</html>

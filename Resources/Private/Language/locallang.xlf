@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" date="2012-10-18T17:55:17Z" product-name="jst_content">
+        <header/>
+        <body>	
+			<trans-unit id="flux.YoutubeVideo">
+				<source>Youtube Video</source>
+			</trans-unit>
+			<trans-unit id="flux.YoutubeVideo.description">
+				<source>Video player that only loads when you click on it.</source>
+			</trans-unit>
+			<trans-unit id="flux.YoutubeVideo.fields.videoname">
+				<source>Video Name</source>
+			</trans-unit>
+			<trans-unit id="flux.YoutubeVideo.fields.videokey">
+				<source>Video Key</source>
+			</trans-unit>
+			<trans-unit id="flux.YoutubeVideo.fields.maxwidth">
+				<source>Max Width (with unit px/%)</source>
+			</trans-unit>
+			<trans-unit id="flux.YoutubeVideo.fields.show_controls">
+				<source>Show Controls</source>
+			</trans-unit>
+			<trans-unit id="flux.YoutubeVideo.fields.aspect_ratio">
+				<source>Aspect Ratio</source>
+			</trans-unit>
+			
+			<trans-unit id="flux.GoogleMaps">
+				<source>Google Maps</source>
+			</trans-unit>
+			<trans-unit id="flux.GoogleMaps.description">
+				<source>Interactive map that can be filled with markers</source>
+			</trans-unit>
+			<trans-unit id="flux.GoogleMaps.fields.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="flux.GoogleMaps.fields.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="flux.GoogleMaps.fields.zoom">
+				<source>Zoom</source>
+			</trans-unit>
+			<trans-unit id="flux.GoogleMaps.sections.markers">
+				<source>Map Markers</source>
+			</trans-unit>
+			<trans-unit id="flux.GoogleMaps.objects.marker">
+				<source>Map Marker</source>
+			</trans-unit>
+			<trans-unit id="flux.GoogleMaps.objects.marker.title">
+				<source>Title</source>
+			</trans-unit>	
+			<trans-unit id="flux.GoogleMaps.objects.marker.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="flux.GoogleMaps.objects.marker.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="flux.GoogleMaps.objects.marker.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			
+			<trans-unit id="flux.JssorSlider">
+				<source>Jssor Slider</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.description">
+				<source>Text &amp; image slideshow</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.fields.skin">
+				<source>General Skin</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.fields.bulletskin">
+				<source>Bullet Skin</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.fields.arrowskin">
+				<source>Arrow Skin</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.fields.thumbnailskin">
+				<source>Thumbnail Skin</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.fields.size">
+				<source>Size</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.fields.show_thumbs">
+				<source>Use Thumbnails instead of Bullets</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.fields.background">
+				<source>Background</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.sections.slides">
+				<source>Slides</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.objects.slide">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.objects.slide.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.objects.slide.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.objects.slide.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.objects.slide.no_crop">
+				<source>No crop</source>
+			</trans-unit>
+			<trans-unit id="flux.JssorSlider.objects.slide.hidden">
+				<source>Hidden</source>
+			</trans-unit>
+			
+			<trans-unit id="flux.Tabs">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.Tabs.description">
+				<source>Sort content into any number of tabs.</source>
+			</trans-unit>
+			<trans-unit id="flux.Tabs.sections.tabs">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.Tabs.objects.tab">
+				<source>Tab</source>
+			</trans-unit>
+			<trans-unit id="flux.Tabs.objects.tab.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="flux.Tabs.objects.tab.icon">
+				<source>Icon Class</source>
+			</trans-unit>
+			<trans-unit id="flux.Tabs.objects.tab.hidden">
+				<source>Hidden</source>
+			</trans-unit>
+			
+			<trans-unit id="flux.Area">
+				<source>Area</source>
+			</trans-unit>
+			<trans-unit id="flux.Area.description">
+				<source>Container with a custom ID</source>
+			</trans-unit>
+			<trans-unit id="flux.Area.fields.area_id">
+				<source>ID</source>
+			</trans-unit>
+			<trans-unit id="flux.Area.fields.area_class">
+				<source>CSS Class</source>
+			</trans-unit>
+			<trans-unit id="flux.Area.columns.area_content-">
+				<source>Content</source>
+			</trans-unit>
+
+			<trans-unit id="flux.Columns">
+				<source>Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.description">
+				<source>Place content into 2-4 columns</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.columns">
+				<source>Number of columns</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.equal_height_columns">
+				<source>Equal height columns</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.gap">
+				<source>Gap between columns</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.gap.option.none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.gap.option.s">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.gap.option.m">
+				<source>Medium (default)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.gap.option.l">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.gap.option.xl">
+				<source>Very large</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.order2">
+				<source>Logical Column Order</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.order3">
+				<source>Logical Column Order</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.order4">
+				<source>Logical Column Order</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.conf2_xs">
+				<source>Layout for Small Screens (col-xs)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.conf2_sm">
+				<source>Layout (col-sm)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.conf2_md">
+				<source>Alternative Layout for Large Screens (col-md)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.conf3_xs">
+				<source>Layout for Small Screens (col-xs)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.conf3_sm">
+				<source>Layout (col-sm)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.conf3_md">
+				<source>Alternative Layout for Large Screens (col-md)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.conf4_xs">
+				<source>Layout for Small Screens (col-xs)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.conf4_sm">
+				<source>Layout (col-sm)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.conf4_md">
+				<source>Alternative Layout for Large Screens (col-md)</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.customclass1">
+				<source>Custom classes for Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.customclass2">
+				<source>Custom classes for Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.customclass3">
+				<source>Custom classes for Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.fields.customclass4">
+				<source>Custom classes for Column 4</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.columns.column1-">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.columns.column2-">
+				<source>Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.columns.column3-">
+				<source>Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.columns.column4-">
+				<source>Column 4</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.columns.column5-">
+				<source>Column 5</source>
+			</trans-unit>
+			<trans-unit id="flux.Columns.columns.column6-">
+				<source>Column 6</source>
+			</trans-unit>
+		</body>
+	</file>	
+</xliff>

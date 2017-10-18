@@ -1,0 +1,20 @@
+{  
+	"name": "josta/jst_content",
+    "type": "typo3-cms-extension",
+    "description": "Easy to use but powerful Flux-based content element types",
+    "homepage": "https://github.com/josta/jst_content",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josua Stabenow",
+            "email": "josua.stabenow@gmx.de"
+        }
+    ],
+	"preferred-install": "dist",
+    "support": {
+        "issues": "https://github.com/josta/jst_content/issues"
+	},
+    "require": {
+        "php": ">=7.0.0"
+    }
+}

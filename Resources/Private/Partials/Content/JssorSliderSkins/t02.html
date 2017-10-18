@@ -1,0 +1,38 @@
+﻿{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:asset.style name="jssort02" standalone="1">
+	.jssort02 {
+		position: absolute;
+		width: 100%;
+		height: 70px;
+		left: 0;
+		top: 5px;
+	}
+	.jssort02 .p {
+		width: 99px;
+		height: 66px;
+	}
+	.jssort02 .p .c {
+		background: url(/typo3conf/ext/jst_content/Resources/Public/Vendor/jssor/img/t01.png) -800px -800px no-repeat;
+		border: #000 2px solid;		
+	}
+	.jssort02 .pav .c {
+		background-position: 50% 50%;
+		border: none;	
+	}
+	.jssort02 .pdn .c {
+		background-position: 50% 50%;
+		border-width: 2px;
+	}
+</v:asset.style>
+
+<div class="jssort02" u="thumbnavigator">
+	<!-- Thumbnail Item Skin Begin -->
+	<div class="thumbs" u="slides">
+		<div class="p" u="prototype">
+			<div class="w"><div class="t" u="thumbnailtemplate"></div></div>
+			<div class="c"></div>
+		</div>
+	</div>
+	<!-- Thumbnail Item Skin End -->
+</div>

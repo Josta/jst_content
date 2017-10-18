@@ -1,0 +1,14 @@
+# cat=basic/enable; type=string; label=API key for Google Maps access
+google_maps_api_key =
+
+# cat=basic/enable; type=boolean; label=Enable Real Tab View in Backend: The tab content element will show actual tabs in the backend
+enable_be_tabs = 1
+
+# cat=basic/enable; type=boolean; label=Fluid in HTML: Allows you to use Fluid namespaces and tags in the HTML content element
+fluid_in_html = 1
+
+# cat=basic/enable; type=boolean; label=Responsive Image Columns: Changes the image grids in "Images", "Text & Images" and "Text & Media" to be responsive using flexbox.
+responsive_image_columns = 1
+
+# cat=basic/enable; type=boolean; label=Responsive Image Sizes: deliver several image sizes to browser, which can then choose the best suited variant. This requires "Responsive Image Columns".
+responsive_image_sizes = 1

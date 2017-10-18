@@ -1,0 +1,24 @@
+﻿{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:asset.style name="jssora20" standalone="1">
+	.jssora20l, .jssora20r {
+		display: block;
+		position: absolute;
+		width: 55px;
+		height: 55px;
+		cursor: pointer;
+		background: url(/typo3conf/ext/jst_content/Resources/Public/Vendor/jssor/img/a20.png) no-repeat;
+		overflow: hidden;
+	}
+	.jssora20l { background-position: -3px -33px; }
+	.jssora20r { background-position: -63px -33px; }
+	.jssora20l:hover { background-position: -123px -33px; }
+	.jssora20r:hover { background-position: -183px -33px; }
+	.jssora20l.jssora20ldn { background-position: -243px -33px; }
+	.jssora20r.jssora20rdn { background-position: -303px -33px; }
+	.jssora20l.jssora20lds { background-position: -3px -33px; opacity: .3; pointer-events: none; }
+	.jssora20r.jssora20rds { background-position: -63px -33px; opacity: .3; pointer-events: none; }
+</v:asset.style>
+
+<span u="arrowleft" class="jssora20l" style="top: 123px; left: 8px;"></span>
+<span u="arrowright" class="jssora20r" style="top: 123px; right: 8px;"></span>

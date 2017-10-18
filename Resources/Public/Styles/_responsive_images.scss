@@ -1,0 +1,44 @@
+.ce-center .ce-media {
+	text-align: center;
+}
+
+.ce-media {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: stretch;
+	justify-content: space-around;
+}
+
+.ce-media-col {
+	flex: 1 0 auto;
+	width: 100%;
+	min-width: 200px;
+	max-width: 400px;
+	padding: 5px;
+}
+
+.ce-media-col-4,
+.ce-media-col-5 {
+	width: 50%;
+}
+
+@media (min-width: $screen-sm-min) {
+	.ce-media-col-2 {
+		width: 50%;
+	}
+	.ce-media-col-3 {
+		width: 33%;
+	}
+	.ce-media-col-4,
+	.ce-media-col-5 {
+		width: 25%;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.ce-media-col-5 {
+		width: 20%;
+	}	
+}

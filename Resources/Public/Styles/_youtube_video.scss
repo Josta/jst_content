@@ -1,0 +1,78 @@
+
+.youtubevideo {
+	position: relative;
+	margin: 0 auto;	
+	background: #000;
+	overflow: hidden;
+	
+	/* children of aspect ratio divs must be made parent size */
+	& > *, iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	/* embed a 16:9 aspect ratio div (potentially clipped) */
+	.yt-iframewrap > * {
+		position: absolute;
+		width: 101%;
+		&:before {
+			content: "";
+			display: block;
+			padding-top: 56.25%;
+		}
+	} 
+	
+	/* center this. parent must be absolute/relative */
+	.yt-centered {
+		position : absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	iframe {	
+		border: none;
+		display: block;
+	}
+	
+	.overlay {
+		font-size: 100px;
+		text-shadow: 0 0 15px rgba(0,0,0,0.8);	
+		cursor: pointer;
+		transition: all 0.4s;
+		.icon-play-circle {
+			transition: all 0.4s;
+			@include icon-color(rgba(255,255,255,0.8));
+		}
+		&:hover {
+			transform: scale(1.2);
+			.icon-play-circle {
+				@include icon-color(#fff);	
+			}
+		}
+	}
+}
+
+.youtubevideo:before {
+	content: "";
+	display: block;
+}
+.youtubevideo-4by3:before {
+	padding-top: 75%;
+}
+.youtubevideo-16by9:before {
+	padding-top: 56.25%;
+}
+.youtubevideo-2by1:before {
+	padding-top: 50%;
+}
+.youtubevideo-240by100:before {
+	padding-top: 41.841%;
+}

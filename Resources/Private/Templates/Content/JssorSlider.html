@@ -1,0 +1,134 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+    xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"  xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<f:layout name="Content/Default"/>
+
+<f:section name="Configuration">
+    <flux:form id="JssorSlider">
+		<flux:form.option.icon value="EXT:jst_content/Resources/Public/Icons/Content/JssorSlider.svg" />
+		
+		{v:variable.set(name: 'arrow_options', value:{
+		   0:{0:'Arrow 1',		1:'a01', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a01.png'},
+		   1:{0:'Arrow 2',		1:'a02', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a02.png'},
+		   2:{0:'Arrow 3',		1:'a03', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a03.png'},
+		   3:{0:'Arrow 4',		1:'a04', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a04.png'},
+		   4:{0:'Arrow 5',		1:'a05', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a05.png'},
+		   5:{0:'Arrow 6',		1:'a06', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a06.png'},
+		   6:{0:'Arrow 7',		1:'a07', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a07.png'},
+		   7:{0:'Arrow 8',		1:'a08', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a08.png'},
+		   8:{0:'Arrow 9',		1:'a09', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a09.png'},
+		   9:{0:'Arrow 10',		1:'a10', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a10.png'},
+		   10:{0:'Arrow 11',	1:'a11', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a11.png'},
+		   11:{0:'Arrow 12',	1:'a12', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a12.png'},
+		   12:{0:'Arrow 13',	1:'a13', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a13.png'},
+		   13:{0:'Arrow 14',	1:'a14', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a14.png'},
+		   14:{0:'Arrow 15',	1:'a15', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a15.png'},
+		   15:{0:'Arrow 16',	1:'a16', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a16.png'},
+		   16:{0:'Arrow 18',	1:'a18', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a18.png'},
+		   17:{0:'Arrow 19',	1:'a19', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a19.png'},
+		   18:{0:'Arrow 20',	1:'a20', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a20.png'},
+		   19:{0:'Arrow 21',	1:'a21', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a21.png'},
+		   20:{0:'Arrow 22',	1:'a22', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/a22.png'}
+		})}
+		{v:variable.set(name: 'bullet_options', value:{
+		   0:{0:'Bullet 1',		1:'b01', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b01.png'},
+		   1:{0:'Bullet 2',		1:'b02', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b02.png'},
+		   2:{0:'Bullet 3',		1:'b03', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b03.png'},
+		   3:{0:'Bullet 5',		1:'b05', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b05.png'},
+		   4:{0:'Bullet 6',		1:'b06', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b06.png'},
+		   5:{0:'Bullet 7',		1:'b07', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b07.png'},
+		   6:{0:'Bullet 9',		1:'b09', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b09.png'},
+		   7:{0:'Bullet 10',	1:'b10', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b10.png'},
+		   8:{0:'Bullet 11',	1:'b11', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b11.png'},
+		   9:{0:'Bullet 12',	1:'b12', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b12.png'},
+		   10:{0:'Bullet 13',	1:'b13', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b13.png'},
+		   11:{0:'Bullet 14',	1:'b14', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b14.png'},
+		   12:{0:'Bullet 16',	1:'b16', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b16.png'},
+		   13:{0:'Bullet 17',	1:'b17', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b17.png'},
+		   14:{0:'Bullet 18',	1:'b18', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b18.png'},
+		   15:{0:'Bullet 20',	1:'b20', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b20.png'},
+		   16:{0:'Bullet 21',	1:'b21', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/b21.png'}
+		})}
+		{v:variable.set(name: 'thumb_options', value:{
+		   0:{0:'Thumb 1',		1:'t01', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t01.png'},
+		   1:{0:'Thumb 2',		1:'t02', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t02.png'},
+		   2:{0:'Thumb 3',		1:'t03', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t03.png'},
+		   3:{0:'Thumb 4',		1:'t04', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t04.png'},
+		   4:{0:'Thumb 5',		1:'t05', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t05.png'},
+		   5:{0:'Thumb 6',		1:'t06', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t06.png'},
+		   6:{0:'Thumb 7',		1:'t07', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t07.png'},
+		   7:{0:'Thumb 8',		1:'t08', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t08.png'}
+		})}
+		<f:comment>
+		   unmaintained skins
+		   8:{0:'Thumb 9',		1:'t09', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t09.png'},
+		   9:{0:'Thumb 10',		1:'t10', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t10.png'},
+		   10:{0:'Thumb 15',	1:'t15', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t15.png'},
+		   11:{0:'Thumb 16',	1:'t16', 2:'EXT:jst_content/Resources/Public/Icons/Jssor/t16.png'}
+		</f:comment>
+		<flux:field.select name="arrowskin" items="{arrow_options}" default="a01" showIconTable="1"  />
+		<flux:field.select name="bulletskin" items="{bullet_options}" default="b01" showIconTable="1"  />
+		<flux:field.checkbox name="show_thumbs" default="0" />
+		<flux:field.select name="thumbnailskin" items="{thumb_options}" default="t01" />
+		<flux:field.select name="size" items="{0: {0: 'Frame Size', 1: 'frame-size'}, 1: {0: '300px', 1: 'size-300'}}" default="size-300" />
+		<flux:field.input name="background" default="#222222">
+			<flux:wizard.colorPicker hideParent="1" />
+		</flux:field.input>	
+		
+		<flux:form.section name="slides">
+			<flux:form.object name="slide">
+				<flux:field.input name="title" />
+				<flux:field.file name="image" allowed="jpg,png" showThumbnails="1" />
+				<flux:field.checkbox name="no_crop" default="0" />
+				<flux:field.checkbox name="hidden" default="0" />
+				<flux:field.input name="link"><flux:wizard.link hideParent="1"/></flux:field.input>
+			</flux:form.object>
+		</flux:form.section>
+		
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<f:for each="{slides}" as="obj">
+		<div class="slide" style="display:inline-block; border:1px solid #444; padding:5px; margin:5px; text-align:center; {f:if(condition:obj.slide.hidden, then:'opacity:0.3;')}">
+			<f:image src="{obj.slide.image}" alt="" title="{obj.slide.title}" width="150c" height="100c" />
+			<div>
+				{obj.slide.title}
+				<f:if condition="{obj.slide.link}">
+					<i class="fa fa-link"></i>
+				</f:if>
+			</div>
+		</div>
+	</f:for>
+</f:section>
+
+<f:section name="Main">
+	{v:asset.script(name: 'jssorslider_api', standalone: 1,
+	path: 'EXT:jst_content/Resources/Public/Vendor/jssor/js/jssor.slider.mini.js')}
+	
+	<div class="jssor-slider-wrapper {size}">	
+		<div data-u="loading" class="loading"><div></div></div>
+		<div data-u="slides" class="slides">
+			<f:for each="{slides}" as="obj">
+				<f:if condition="!{obj.slide.hidden}">
+					<div class="slide {f:if(condition: obj.slide.no_crop, then: 'contain')}" style="background:{background}">
+						<f:image src="{obj.slide.image}" alt="" data="{'u': 'image'}" width="900" />
+						<f:if condition="{show_thumbs}">
+							<f:image src="{obj.slide.image}" alt="" data="{'u': 'thumb'}" width="100c" height="100c" />
+						</f:if>
+						<f:if condition="{obj.slide.link}">
+							<f:link.typolink parameter="{obj.slide.link}" class="slidelink">&nbsp;</f:link.typolink>
+						</f:if>
+					</div>	
+				</f:if>
+			</f:for>
+		</div>
+		<f:render partial="Content/JssorSliderSkins/{arrowskin}" />
+		<f:if condition="{show_thumbs}">
+			<f:then><f:render partial="Content/JssorSliderSkins/{thumbnailskin}" /></f:then>
+			<f:else><f:render partial="Content/JssorSliderSkins/{bulletskin}" /></f:else>
+		</f:if>
+	</div>
+</f:section>
+
+</html>

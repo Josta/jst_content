@@ -1,0 +1,41 @@
+.jstcontent-be-tabs {
+	display: block !important;
+	border-bottom: 1px solid #888;
+	padding-left: 10px;
+}
+
+.jstcontent-be-tabs > div {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	padding: 10px 20px;
+	cursor: pointer;
+	color: #222;
+	border-radius: 3px 3px 0 0;
+	border: 1px solid #888;
+	border-bottom: 1px solid #888;
+	background: #ccc;
+}
+.jstcontent-be-tabs > div.active {
+	color: #000;
+	font-weight: bold;
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.jstcontent-be-tabs ~ .grid-visibility-toggle .flux-grid-column {
+	display: none;
+}
+
+.jstcontent-be-tabarea.active {
+	display: table-cell !important;
+}
+
+.jstcontent-be-tabarea .t3-page-column-header {
+	display: none;
+}
+
+.jstcontent-be-tabarea .t3-grid-cell {
+	margin-left: 10px;
+	margin-right: 10px;
+}

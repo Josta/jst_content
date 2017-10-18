@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+    xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<f:layout name="Content/Default"/>
+
+<f:section name="Configuration">
+    <flux:form id="Area">
+		<flux:form.option.icon value="EXT:jst_content/Resources/Public/Icons/Content/Area.svg" />
+		<flux:form.option.group value="Grids" />
+		
+		<flux:field.input name="area_id" />
+		<flux:field.input name="area_class" />
+    </flux:form>
+	<flux:grid>
+		<flux:grid.row>
+			<flux:grid.column name="area_content" />
+		</flux:grid.row>
+	</flux:grid>
+</f:section>
+
+<f:section name="Main">
+	<div id="{area_id}" class="area {area_class}">
+		<flux:content.render area="area_content" />
+	</div>
+</f:section>
+
+</html>
+

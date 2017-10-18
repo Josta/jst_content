@@ -1,0 +1,2 @@
+$ ->
+	$('.equal-height').matchHeight()

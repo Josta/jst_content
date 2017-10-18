@@ -1,0 +1,27 @@
+﻿{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:asset.style name="jssorb21" standalone="1">
+	.jssorb21 {
+		position: absolute;
+	}
+	.jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+		position: absolute;
+		width: 19px;
+		height: 19px;
+		text-align: center;
+		line-height: 19px;
+		color: white;
+		font-size: 12px;
+		background: url(/typo3conf/ext/jst_content/Resources/Public/Vendor/jssor/img/b21.png) no-repeat;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.jssorb21 div { background-position: -5px -5px; }
+	.jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+	.jssorb21 .av { background-position: -65px -5px; }
+	.jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+</v:asset.style>
+
+<div u="navigator" class="jssorb21" style="bottom: 16px; right: 6px;">
+	<div u="prototype"></div>
+</div>

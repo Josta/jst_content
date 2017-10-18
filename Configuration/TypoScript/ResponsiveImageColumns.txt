@@ -1,0 +1,4 @@
+
+lib.contentElement {
+	partialRootPaths.40 = EXT:jst_content/Resources/Private/Partials/fluid_styled_content/responsive_image_columns/
+}

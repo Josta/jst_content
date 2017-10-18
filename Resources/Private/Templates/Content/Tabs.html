@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+    xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<f:layout name="Content/Default"/>
+
+<f:section name="Configuration">
+    <flux:form id="Tabs">
+		<flux:form.option.icon value="EXT:jst_content/Resources/Public/Icons/Content/Tabs.svg" />
+		<flux:form.option.group value="Grids" />
+		
+		<flux:form.section name="tabs">
+			<flux:form.object name="tab">
+				<flux:field.input name="title" />
+				<flux:field.input name="icon" />
+				<flux:field.checkbox name="hidden" default="0" />
+			</flux:form.object>
+		</flux:form.section>
+		
+    </flux:form>
+	
+	<flux:grid>		
+		<flux:grid.row>
+			<f:for each="{tabs}" as="obj" key="id">
+				<flux:grid.column name="column{id}" label="{obj.tab.title}{f:if(condition: obj.tab.hidden, then: ' (disabled)')}" />
+			</f:for>
+		</flux:grid.row>
+	</flux:grid>
+	
+</f:section>
+
+<f:section name="Preview">
+	<div class="jstcontent-be-tabs" style="display:none">
+		<f:for each="{tabs}" as="obj" key="id">
+			<div>{obj.tab.title}{f:if(condition: obj.tab.hidden, then: ' (disabled)')}</div>
+		</f:for>
+	</div>
+</f:section>
+
+
+<f:section name="Main">
+
+	<ul class="nav nav-tabs">
+		<f:for each="{tabs}" as="obj" key="id" iteration="it">
+			<f:if condition="!{obj.tab.hidden}">
+				<li class="{f:if(condition: '{it.index} == 0', then: 'active')} {obj.tab.icon}"><a data-toggle="tab" href="#{id}">{obj.tab.title}</a></li>
+			</f:if>
+		</f:for>
+	</ul>
+
+	<div class="tab-content">
+		<f:for each="{tabs}" as="obj" key="id" iteration="it">
+			<f:if condition="!{obj.tab.hidden}">
+				<div id="{id}" class="tab-pane fade {f:if(condition:'{it.index} == 0', then: 'in active')}">
+					<flux:content.render area="column{id}" />
+				</div>
+			</f:if>
+		</f:for>
+	</div>
+	
+</f:section>
+
+</html>

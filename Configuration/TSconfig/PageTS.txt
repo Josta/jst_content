@@ -1,0 +1,22 @@
+# reorder content wizard tabs
+mod.wizards.newContentElement.wizardItems {
+	Grids.after = common
+	fluxContent.after = Grids
+	fluxContent.before = plugins,forms,menu
+}
+
+# set sensible content element defaults
+[globalVar = GP:defVals|tt_content|CType == flux_columns]
+	TCAdefaults.tt_content {
+		space_before_class =
+		space_after_class =
+	}
+[end]
+[globalVar = GP:defVals|tt_content|CType == flux_area]
+	TCAdefaults.tt_content {
+		space_before_class =
+		space_after_class =
+	}
+[end]
+
+
