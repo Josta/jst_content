@@ -49,6 +49,7 @@ Requirements
 The extension requires
 
 - ``TYPO3 8.7.4`` or higher
+- ``ext:vhs``
 - ``jQuery``
 - ``Bootstrap 3 or 4`` for the Bootstrap elements
 
@@ -157,7 +158,7 @@ Need some ideas what to do with it?
 
 - apply any predefined style
 - use the ID as an anchor
-- (Bootstrap) create collapsed content (id="something" class="collapse") and add a toggle link somewhere else (<a href="#something" data-toggle="collapse">Show Content</a>).
+- (Bootstrap) create collapsed content (``id="something" class="collapse"``) and add a toggle link somewhere else (``<a href="#something" data-toggle="collapse">Show Content</a>``).
 - use it with content elements like "Tabs by content"/"Columns by content" which are provided by some other extensions
 
 
@@ -184,16 +185,16 @@ Responsive Images
 
 ``JST Content`` modifies the output of images in standard content types in two ways:
 
-- it replaces the default float-based grid structure for image columns with a Flexbox structure, which is way more flexible (pun intended) and responsive.
-- it registers a new Renderer for ``jpeg/png`` images which will output the following code:
+- **Responsive image columns**: replaces the default float-based grid structure for image columns with a Flexbox structure, which is way more flexible (pun intended) and responsive.
+- **Responsive image sizes**: registers a new Renderer for ``jpeg/png`` images which will output the following code:
 
 ::
 
 	<noscript><img src="x" srcset="x,y,z" width="100%" ... /></noscript>
 	
-Basically this means that the server provides different sizes of the image (x,y,z) to the browser, which can choose the best fitting one. The image is set to have 100% width of the parent container. Older browsers will fallback to the image URL that is given in ``src``.
+Basically the ``<img>`` tag contents mean that the server provides different sizes of the image (x,y,z) to the browser, which can choose the best fitting one. Older browsers will fallback to the image URL that is given in ``src``.
 
-Without the ``<noscript>`` wrap (or if there is no JavaScript available), the browser would choose the image version that best fits if the image were to be displayed in fullscreen. This often is way too large. With the ``<noscript>`` tag, we tell the browser not not load anything at all at first, given ``JavaScript`` is available. Then a small script snippet finds all responsive images, unwraps them and sets the ``<img>`` ``sizes`` attribute to the parent container width. This is a way of telling the browser that the ideal version would be just as wide as the image parent container.
+Normally, the browser would choose the image version that would fit best if the image were to be displayed *in fullscreen*. This often is way too large. With the ``<noscript>`` tag, we tell the browser not not load the image if ``JavaScript`` is available. Then a small script snippet finds all responsive images, unwraps them and sets the ``<img>`` ``sizes`` attribute to the parent container width. This is a way of telling the browser that the ideal version would be just as wide as the image parent container (instead of fullscreen).
 
 Both the responsive image columns and the responsive image sizes can be disabled in the extension manager. The latter depends on the former, however.
 
